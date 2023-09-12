@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --dark: #0C110B;
+  --bg: #091651;
+  --text-main: #FAEFE6;
+  --text-secondary: #ffb327;
+  --text-terciary: #CB5656;
+}
+
+#root{
+  background-image: radial-gradient(22% 23% at 25% 18%, #260052 0%, #073aff00 100%),radial-gradient(38% 42% at 35% 40%, #260052FF 0%, #073AFF00 100%),radial-gradient(38% 34% at 30% 73%, #002952FF 0%, #073AFF00 100%),radial-gradient(38% 34% at 47% 17%, #002952FF 0%, #073AFF00 100%),radial-gradient(38% 34% at 68% 54%, #002B52FF 0%, #073AFF00 100%),radial-gradient(35% 41% at 69% 22%, #0E0052FF 0%, #073AFF00 100%),radial-gradient(35% 41% at 50% 44%, #001C52FF 0%, #073AFF00 100%),radial-gradient(35% 41% at 86% 75%, #0E0052FF 0%, #073AFF00 100%),radial-gradient(24% 25% at 114% 75%, #070038FF 0%, #073AFF00 100%),radial-gradient(24% 39% at 112% 24%, #004645FF 0%, #073AFF00 99%),linear-gradient(20deg, #05001b 0%, #05001b 99%);
+  font-family: 'Inconsolata', monospace;
+  color: var(--text-main);
+}
+
+h1, h2, h3, h4, h5, h6 {font-family: 'Montserrat', sans-serif;}
+
+.secondary-color{
+  color: var(--text-secondary)
+}
+
+.inconsolata{
+  font-family: 'Inconsolata', monospace;
+}
+
+.typewrite::after{
+  content: "|";
+  animation-name: cursor;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes cursor {
+  0% {
+      visibility: hidden;
+  }
+  50% {
+      visibility: hidden;
+  }
+  100% {
+      visibility:visible;
+  }
+}
+
+#connect-slide svg, #navbar a{
+  color: rgba(250, 239, 230, 50%);
+  transition: ease-in 0.1s;
+}
+
+#connect-slide svg{
+  width: 25px;
+  height: 25px;
+}
+
+#connect-slide svg:hover, #navbar a:hover{
+  color: #faefe6;
+  
+}
+
+#navbar a{
+  text-decoration: none;
+}
