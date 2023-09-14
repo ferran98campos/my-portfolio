@@ -7,7 +7,7 @@
 :root {
   --dark: #0C110B;
   --bg: #091651;
-  --text-main: #FAEFE6;
+  --text-main: #fcf7f5;
   --text-secondary: #ffb327;
   --text-terciary: #CB5656;
 }
@@ -21,11 +21,39 @@
 h1, h2, h3, h4, h5, h6 {font-family: 'Montserrat', sans-serif;}
 
 .secondary-color{
-  color: var(--text-secondary)
+  color: var(--text-secondary);
+}
+
+.terciary-color{
+  color: var(--text-terciary);
+}
+
+.dark-color{
+  color: var(--dark);
+}
+
+.bg-primary-color{
+  background-color: var(--text-main);
+}
+
+.bg-secondary-color{
+  background-color: var(--text-secondary);
+}
+
+.bg-terciary-color{
+  background-color: var(--text-terciary);
+}
+
+.bg-dark-color{
+  background-color: var(--dark);
 }
 
 .inconsolata{
   font-family: 'Inconsolata', monospace;
+}
+
+.montserrat{
+  font-family: 'Montserrat', sans-serif;
 }
 
 .typewrite::after{
@@ -64,4 +92,42 @@ h1, h2, h3, h4, h5, h6 {font-family: 'Montserrat', sans-serif;}
 
 #navbar a{
   text-decoration: none;
+}
+
+
+.bentoUI > div{
+  transition: all 0.25s ease;
+  filter: brightness(90%);
+}
+
+.bentoUI > div.clickable:hover{
+  transform: translateY(-5px);
+  cursor:pointer;
+  filter: brightness(100%);
+}
+
+.bentoUI > div.hoverable:hover, .bentoUI > div.clickable:hover{
+  transform: translateY(-5px);
+  cursor:pointer;
+}
+
+.bentoUI > div.hoverable:hover img{
+  filter: brightness(30%);
+}
+
+.hover-content {
+  transition: all 0.25s ease;
+  display:none;
+  position: absolute;
+  max-width: 100%;
+  text-align: center;
+  font-weight: bold;
+}
+
+.image-bento-parent:hover .hover-content {
+  display:block;
+  transition: all 0.25s ease;
+}
+.image-bento:hover{
+  transition: all 0.25s ease;
 }
