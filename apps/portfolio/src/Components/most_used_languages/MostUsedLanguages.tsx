@@ -24,7 +24,7 @@ function MostUsedLanguages(){
           stroke="#e4e2e2"
           width="100%"
           fill="#fcf7f5"
-          stroke-opacity="0"
+          strokeOpacity="0"
         />
 
         

@@ -10,15 +10,34 @@
   --text-main: #fcf7f5;
   --text-secondary: #ffb327;
   --text-terciary: #CB5656;
+  font-size: .625vw;
 }
 
 #root{
   background-image: radial-gradient(22% 23% at 25% 18%, #260052 0%, #073aff00 100%),radial-gradient(38% 42% at 35% 40%, #260052FF 0%, #073AFF00 100%),radial-gradient(38% 34% at 30% 73%, #002952FF 0%, #073AFF00 100%),radial-gradient(38% 34% at 47% 17%, #002952FF 0%, #073AFF00 100%),radial-gradient(38% 34% at 68% 54%, #002B52FF 0%, #073AFF00 100%),radial-gradient(35% 41% at 69% 22%, #0E0052FF 0%, #073AFF00 100%),radial-gradient(35% 41% at 50% 44%, #001C52FF 0%, #073AFF00 100%),radial-gradient(35% 41% at 86% 75%, #0E0052FF 0%, #073AFF00 100%),radial-gradient(24% 25% at 114% 75%, #070038FF 0%, #073AFF00 100%),radial-gradient(24% 39% at 112% 24%, #004645FF 0%, #073AFF00 99%),linear-gradient(20deg, #05001b 0%, #05001b 99%);
+  background-attachment: fixed;
   font-family: 'Inconsolata', monospace;
   color: var(--text-main);
 }
 
 h1, h2, h3, h4, h5, h6 {font-family: 'Montserrat', sans-serif;}
+
+h1{
+  font-size: 4rem;
+}
+
+h2{
+  font-size: 2rem;
+}
+
+h3{}
+
+.main-image{
+  width: 30rem;
+  height: auto;
+  margin: auto;
+  margin-left: 5rem;
+}
 
 .secondary-color{
   color: var(--text-secondary);
@@ -56,47 +75,58 @@ h1, h2, h3, h4, h5, h6 {font-family: 'Montserrat', sans-serif;}
   font-family: 'Montserrat', sans-serif;
 }
 
-.typewrite::after{
-  content: "|";
-  animation-name: cursor;
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
-}
-
-@keyframes cursor {
-  0% {
-      visibility: hidden;
+/*TypeWrite*/
+  .typewrite::after{
+    content: "|";
+    animation-name: cursor;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
   }
-  50% {
-      visibility: hidden;
+
+  @keyframes cursor {
+    0% {
+        visibility: hidden;
+    }
+    50% {
+        visibility: hidden;
+    }
+    100% {
+        visibility:visible;
+    }
   }
-  100% {
-      visibility:visible;
+
+/*Connect Slide*/
+  #connect-slide svg, #navbar a{
+    color: rgba(250, 239, 230, 50%);
+    transition: ease-in 0.1s;
   }
-}
 
-#connect-slide svg, #navbar a{
-  color: rgba(250, 239, 230, 50%);
-  transition: ease-in 0.1s;
-}
+  #connect-slide svg{
+    width: 25px;
+    height: 25px;
+    padding-bottom: 20px;
+  }
 
-#connect-slide svg{
-  width: 25px;
-  height: 25px;
-}
+  #connect-slide svg:hover, #navbar a:hover{
+    color: var(--text-main);
+  }
 
-#connect-slide svg:hover, #navbar a:hover{
-  color: #faefe6;
-  
-}
+/*Navbar*/
+  #navbar a{
+    font-size: 1.35rem;
+    margin: 0px 5rem;
+  }
 
-#navbar a{
-  text-decoration: none;
+/*BentoUI*/
+.bentoUI{
+  aspect-ratio: 3/2;
+  width: 100rem;
+  height: auto;
+  font-size: 5rem;
 }
-
 
 .bentoUI > div{
-  transition: all 0.25s ease;
+  transition: transform 0.25s ease;
   filter: brightness(90%);
 }
 
@@ -117,11 +147,12 @@ h1, h2, h3, h4, h5, h6 {font-family: 'Montserrat', sans-serif;}
 
 .hover-content {
   transition: all 0.25s ease;
-  display:none;
+  display: none;
   position: absolute;
   max-width: 100%;
   text-align: center;
   font-weight: bold;
+  font-size: 1.5rem;
 }
 
 .image-bento-parent:hover .hover-content {
@@ -130,4 +161,27 @@ h1, h2, h3, h4, h5, h6 {font-family: 'Montserrat', sans-serif;}
 }
 .image-bento:hover{
   transition: all 0.25s ease;
+}
+
+section > h3{
+  font-size: 4rem;
+  text-align: center;
+  padding: 2rem 0px;
+  margin: 4rem auto; 
+  border-bottom: 2px solid var(--text-secondary);
+  width: 120rem;
+}
+
+.more-projects{
+  height: 25vh;
+  width: 100rem;
+  font-size: 3rem;
+}
+
+.connect{
+  font-size: 4rem;
+}
+
+.connect-arrow{
+  margin-left: 10rem;
 }

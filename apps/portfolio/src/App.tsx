@@ -1,25 +1,31 @@
-import React from 'react';
-import ShootingStars from './Components/shooting_stars/shooting_stars';
+
 import WooblyImage from './Components/woobly_image/woobly_image';
 import TypedText from './Components/typed_text/typed_text';
 import MostUsedLanguages from './Components/most_used_languages/MostUsedLanguages';
 import GeneralGithubStats from './Components/general_github_stats/GeneralGithubStats';
 import SpotifyCode from './Components/spotify_code/SpotifyCode';
+import ProjectList from './Components/project_list/project_list';
+import SkillList from './Components/skill_list/SkillList';
 import './App.css';
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faUnity, faReact, faAngular, faSpotify, faSquareJs, faHtml5, faCss3Alt, faPython, faBootstrap, faFigma } from '@fortawesome/free-brands-svg-icons'
+import { faGamepad, faDatabase, faEnvelope, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { HashLink as Link } from 'react-router-hash-link';
 
-export default function App() {
+import { library } from '@fortawesome/fontawesome-svg-core'
+library.add(faUnity, faSpotify, faReact, faAngular, faDatabase, faGamepad, faSquareJs, faHtml5, faCss3Alt, faPython, faBootstrap, faFigma);
+
+
+export default function App({role}) {
   return (
     <div>
       <section id="navbar" className='flex w-full absolute overflow-hidden justify-end pt-8 font-bold [&>a]:cursor-pointer [&>a]:mr-20' >
           <Link to="#about" >ABOUT</Link>
-          <a >SKILLS</a>
-          <a >PROJECTS</a>
-          <a >CONNECT</a>
+          <Link to="#projects" >PROJECTS</Link>
+          <Link to="#skills" >SKILLS</Link>
+          <Link to="#connect" >CONNECT</Link>
       </section>
       <section id="connect-slide" className='flex flex-col h-screen fixed justify-center gap-r right-20 [&>a]:pb-3'>
           <a href="https://www.linkedin.com/in/ferran-campos-llopart/"><FontAwesomeIcon icon={faLinkedin}/></a>
@@ -29,16 +35,16 @@ export default function App() {
       <section className='h-screen'>
         <div className='h-full flex gap-20'>
           <div className='basis-11/20 flex flex-col gap-0.5 justify-center items-end'>
-            <h1 className='text-5xl'>Ferran <b className='secondary-color'>Campos Llopart</b></h1>
-            <TypedText typewrite_text="I'm a full-stack developer" speed={50} classes='text-2xl inconsolata'></TypedText>
+            <h1 >Ferran <b className='secondary-color'>Campos Llopart</b></h1>
+            <TypedText typewrite_text={"I'm a "+ role.replace(/\//g, '').replace(/_/g,' ')} speed={50} classes='inconsolata'></TypedText>
           </div>
-          <div className='basis-9/20 m-auto items-end h-2/5'>
-            <WooblyImage classes={'h-full border-4 bg-black'} path={process.env.PUBLIC_URL+'/img/persona_photo.png'}></WooblyImage>
+          <div className='items-end main-image'>
+            <WooblyImage id='portfolio-image' classes={'h-full border-4 bg-black'} path={process.env.PUBLIC_URL+'/img/persona_photo.png'}></WooblyImage>
           </div>
         </div>
       </section>
       <section id="about" className='h-screen flex justify-center'>
-        <div className='w-3/5 h-4/5 m-auto grid grid-rows-4 grid-cols-6 gap-4 [&>div]:rounded-md bentoUI'>
+        <div className='m-auto grid grid-rows-4 grid-cols-6 gap-4 [&>div]:rounded-md bentoUI'>
           <div className='row-span-1 col-span-2 bg-primary-color clickable'>
             <a className="w-full h-full flex justify-center items-center overflow-hidden rounded-md" href="https://github.com/ferran98campos" title="Github Profilec">
               <GeneralGithubStats></GeneralGithubStats>
@@ -78,7 +84,7 @@ export default function App() {
             </div>
           </div>
           <div className='row-span-2 col-span-2 flex justify-center bg-secondary-color dark-color font-bold clickable'>
-            <a className='flex justify-center' href="https://www.linkedin.com/in/ferran-campos-llopart/" title="LinkedIn Profile"><p className='p-10 m-auto text-left text-6xl font-bold montserrat'>ABOUT ME</p></a>
+            <a className='flex justify-center' href="https://www.linkedin.com/in/ferran-campos-llopart/" title="LinkedIn Profile"><p className='p-10 m-auto text-left font-bold montserrat'>ABOUT ME</p></a>
           </div>
           <div className='row-span-1 col-span-2 bg-primary-color clickable'>
             <a className="w-full h-full flex justify-center items-center overflow-hidden rounded-md" href="https://github.com/ferran98campos" title="Github Profile">
@@ -103,6 +109,22 @@ export default function App() {
             <p className='p-10 m-auto text-center text-3xl font-bold montserrat'>The user is the <span className='secondary-color'>cornerstone</span> of software development</p>
           </div>
         </div>
+      </section>
+      <section id="projects" className='mt-50'>
+        <h3>Relevant Projects</h3>
+        <ProjectList role={role}></ProjectList>
+        <div className='more-projects flex flex-col items-center m-auto'>
+          <p className='font-bold'>Want to check the rest of my projects?</p>
+          <p><a href="https://ferran98campos.github.io/Portfolio/" className='secondary-color underline'>Click here to see my project constellation</a></p>
+        </div>
+      </section>
+      <section id="skills" className='mt-50 h-screen flex flex-col'>
+        <h3>My Skills</h3>
+        <SkillList></SkillList>
+      </section>
+      <section className='h-screen flex items-center justify-center connect' id="connect">
+        <p className='montserrat font-bold'>CONNECT WITH ME! <FontAwesomeIcon className='secondary-color fa-xl connect-arrow' icon={faArrowRight}></FontAwesomeIcon></p>
+        <span id='connect-box'></span>
       </section>
     </div>
     

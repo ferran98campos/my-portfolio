@@ -3,13 +3,19 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
-  <BrowserRouter><App /></BrowserRouter>
+  <BrowserRouter>
+    <Routes>
+        <Route path="/full-stack_developer" element={<App role="full-stack_developer"/>} />
+        <Route path="/videogame_developer" element={<App role="videogame_developer"/>} />
+      <Route path="*" element={<App role="full-stack_developer"/>} /> // page-not-found route
+    </Routes>
+  </BrowserRouter>
   
 );
 

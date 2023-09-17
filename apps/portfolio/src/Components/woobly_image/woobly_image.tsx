@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-function WooblyImage({path, classes}){
+function WooblyImage({id, path, classes}){
 
     let portfolio_image;
     let image_top, image_right, image_bottom, image_left;
@@ -37,7 +37,7 @@ function WooblyImage({path, classes}){
 
     //Use effect for rendering the project map
     useEffect(() => {
-        portfolio_image = document.getElementById('portfolio-image');
+        portfolio_image = document.getElementById(id);
         image_top = generateRandomBetween(30, 70, null);
         image_right = generateRandomBetween(30, 70, null);
         image_bottom = generateRandomBetween(30, 70, null);
@@ -52,7 +52,7 @@ function WooblyImage({path, classes}){
     },[]);
 
     return (
-        <img id='portfolio-image' className={classes} src={path}></img>
+        <img id={id} className={classes} src={path}></img>
     )
 }
 

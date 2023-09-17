@@ -20,7 +20,7 @@ function TypedText({typewrite_text, speed, classes}){
     },[]);
 
     return(
-        <p id="presentation-typewrite" className={'typewrite '+classes}>{presentation_typewrite}</p>
+        <h2 id="presentation-typewrite" className={'typewrite '+classes}>{presentation_typewrite}</h2>
     )
 }
 

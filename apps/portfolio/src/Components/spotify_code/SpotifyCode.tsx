@@ -2,7 +2,7 @@ import React from 'react';
 
 function SpotifyCode(){
     return(
-        <svg width="100%" height="auto" viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+        <svg width="100%" height="100%" viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
             <rect x="0" y="0" width="400" height="100" fill="#cb5656"/>
             <rect x="100.00" y="44.50" width="6.71" height="11.00" rx="3.36" ry="3.36" fill="#000000"/>
             <rect x="112.42" y="34.00" width="6.71" height="32.00" rx="3.36" ry="3.36" fill="#000000"/>
