@@ -1,5 +1,6 @@
 {
   "name": "portfolio",
+  "homepage": "https://ferran98campos.github.io/my-portfolio",
   "version": "0.1.0",
   "private": false, 
   "dependencies": {
@@ -25,7 +26,6 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "homepage": "https://ferran98campos.github.io/my-portfolio/",
     "predeploy" : "npm run build",
     "deploy" : "gh-pages -b master -d build",
     "build": "react-scripts build",
