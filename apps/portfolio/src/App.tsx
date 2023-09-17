@@ -78,7 +78,7 @@ export default function App({role}) {
             </div>
           </div>
           <div className='flex justify-center items-center overflow-hidden hoverable image-bento-parent'>
-            <img className='min-w-full min-h-full shrink-0 image-bento' src={process.env.PUBLIC_URL+'/img/explore.jpg'}></img>
+            <img className='min-w-full min-h-full shrink-0 image-bento' src={process.env.PUBLIC_URL+'/img/Explore.JPG'}></img>
             <div className="hover-content">
               ✈️ Explore
             </div>
@@ -92,7 +92,7 @@ export default function App({role}) {
             </a>
           </div>
           <div className='flex justify-center items-center overflow-hidden hoverable image-bento-parent'>
-            <img className='min-w-full min-h-full shrink-0 image-bento' src={process.env.PUBLIC_URL+'/img/stockholm.jpg'}></img>
+            <img className='min-w-full min-h-full shrink-0 image-bento' src={process.env.PUBLIC_URL+'/img/Stockholm.JPG'}></img>
             <div className="hover-content">
                 📍 Stockholm, Sweden
             </div>
