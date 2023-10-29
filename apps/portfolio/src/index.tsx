@@ -11,8 +11,8 @@ const root = ReactDOM.createRoot(
 root.render(
   <BrowserRouter>
     <Routes>
-        <Route path="/my-portfolio/full-stack_developer" element={<App role="full-stack_developer"/>} />
-        <Route path="/my-portfolio/videogame_developer" element={<App role="videogame_developer"/>} />
+        <Route path="/full-stack_developer" element={<App role="full-stack_developer"/>} />
+        <Route path="/videogame_developer" element={<App role="videogame_developer"/>} />
       <Route path="*" element={<App role="full-stack_developer"/>} />
     </Routes>
   </BrowserRouter>
