@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import db from '../../firebase/firebase.config'
+import db from '../../firebase/firebase.js'
 import { collection, getDocs, query} from "firebase/firestore";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import WooblyImage from '../woobly_image/woobly_image';
