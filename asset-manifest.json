@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/www.ferrancl.com/static/css/main.03bbd02a.css",
-    "main.js": "/www.ferrancl.com/static/js/main.073c9d56.js",
-    "static/js/787.1ed0c42c.chunk.js": "/www.ferrancl.com/static/js/787.1ed0c42c.chunk.js",
-    "index.html": "/www.ferrancl.com/index.html",
-    "main.03bbd02a.css.map": "/www.ferrancl.com/static/css/main.03bbd02a.css.map",
-    "main.073c9d56.js.map": "/www.ferrancl.com/static/js/main.073c9d56.js.map",
-    "787.1ed0c42c.chunk.js.map": "/www.ferrancl.com/static/js/787.1ed0c42c.chunk.js.map"
+    "main.css": "/static/css/main.03bbd02a.css",
+    "main.js": "/static/js/main.5ba9f085.js",
+    "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
+    "index.html": "/index.html",
+    "main.03bbd02a.css.map": "/static/css/main.03bbd02a.css.map",
+    "main.5ba9f085.js.map": "/static/js/main.5ba9f085.js.map",
+    "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.03bbd02a.css",
-    "static/js/main.073c9d56.js"
+    "static/js/main.5ba9f085.js"
   ]
 }
